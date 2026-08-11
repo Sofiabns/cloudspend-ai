@@ -66,9 +66,7 @@ The included deterministic demo run produces approximately:
 | MAE | $29.3 | — |
 | RMSE | $60.0 | — |
 
-The exact values can vary slightly by dependency version. When fewer than 60 daily observations are available, the API explicitly falls back to the seasonal baseline.
-
-The evaluation uses rolling time-based backtesting to preserve temporal order and avoid future-data leakage. Prediction intervals are estimated from backtest residuals. When fewer than 60 daily observations are available, the API explicitly falls back to the seasonal baseline.
+The exact values can vary slightly by dependency version. The evaluation uses rolling time-based backtesting to preserve temporal order and avoid future-data leakage. Prediction intervals are estimated from backtest residuals. When fewer than 60 daily observations are available, the API explicitly falls back to the seasonal baseline.
 
 ## Quick start
 
@@ -127,7 +125,7 @@ npm test
 
 cd backend
 ruff check app tests
-pytest --cov=app
+python -m pytest --cov=app
 ```
 
 The backend suite covers API behavior, aggregation dimensions, prediction intervals, synthetic anomaly discovery, recommendations, and mocked AWS service contracts. The web suite verifies the rendered application shell and recruiter-facing product states. CI also validates Terraform and scans the Git history for secrets.

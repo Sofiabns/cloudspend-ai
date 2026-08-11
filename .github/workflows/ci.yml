@@ -27,7 +27,7 @@ jobs:
         working-directory: backend
       - run: ruff check app tests
         working-directory: backend
-      - run: pytest --cov=app --cov-report=term-missing
+      - run: python -m pytest --cov=app --cov-report=term-missing
         working-directory: backend
   security:
     runs-on: ubuntu-latest
