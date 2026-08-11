@@ -1,0 +1,2 @@
+lambda_image_uri = "123456789012.dkr.ecr.us-east-1.amazonaws.com/cloudspend-ai:sha-0000000"
+allowed_origins = ["https://your-cloudfront-domain.cloudfront.net"]
